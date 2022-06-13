@@ -156,17 +156,6 @@
         "description": "More info: https://docs.paloaltonetworks.com/vm-series/8-1/vm-series-deployment/license-the-vm-series-firewall/license-typesvm-series-firewalls"
       }
     },
-    "PANOSProduct": {
-      "type": "string",
-      "defaultValue": "vmseries-flex",
-      "allowedValues": [
-        "vmseries-flex",
-        "vmseries1"
-      ],
-      "metadata": {
-        "description": "Select the licensing mode. vmseries1 for fixedCPUs or vmseries-flex for flexibleCPUs"
-      }
-    },    
     "PANOSVersion": {
       "type": "string",
       "defaultValue": "latest",
