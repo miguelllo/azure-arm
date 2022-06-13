@@ -74,12 +74,6 @@
     "applyPublicIPToDataplane1": {
       "value": "No"
     },
-    "NSGName": {
-      "value": "vmseries-nsg"
-    },
-    "NSGSourcePrefix": {
-      "value": "0.0.0.0/0"
-    },
     "username": {
       "value": "paloalto"
     },
