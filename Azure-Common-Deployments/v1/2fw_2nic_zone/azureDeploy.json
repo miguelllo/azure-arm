@@ -167,7 +167,7 @@
         "description": "Select the licensing mode. vmseries1 for fixedCPUs or vmseries-flex for flexibleCPUs"
       }
     },    
-    "PANOSVersionFlex": {
+    "PANOSVersion": {
       "type": "string",
       "defaultValue": "latest",
       "allowedValues": [
@@ -195,28 +195,7 @@
         "9.1.2"
       ],
       "metadata": {
-        "description": "Select the PAN-OS version to deploy.  In case you have selected vmseries-flex."
-      }
-    },
-    "PANOSVersionFixed": {
-      "type": "string",
-      "defaultValue": "latest",
-      "allowedValues": [
-        "latest",
-        "9.1.0",
-        "9.0.9",
-        "9.0.6",
-        "9.0.4",
-        "9.0.1",
-        "8.1.15",
-        "8.1.9",
-        "8.1.0",
-        "8.0.0",
-        "7.1.1",
-        "7.1.0"
-      ],
-      "metadata": {
-        "description": "Select the PAN-OS version to deploy.  In case you have selected vmseries1."
+        "description": "Select the PAN-OS version to deploy. Selecting 'Latest' deploys the latest available image on the Azure Marketplace."
       }
     },
     "VMSize": {
@@ -371,8 +350,8 @@
     "global_fw_bootstrap": "[concat('storage-account=', parameters('optional-BootstrapStorageAccount'), ',access-key=', parameters('optional-BootstrapAccessKey'), ',file-share=', parameters('optional-BootstrapFileShareName'), ',share-directory=', parameters('optional-BootstrapShareDirectory'))]",
     "global_fw_publisher": "paloaltonetworks",
     "global_fw_license": "[parameters('licenseType')]",
-    "global_fw_version": "[if(equals(parameters('PANOSProduct'), 'vmseries-flex'), (parameters('PANOSVersionFlex'), (parameters('PANOSVersionFixed'))]",
-    "global_fw_product": "[parameters('PANOSProduct')]",
+    "global_fw_version": "[parameters('PANOSVersion']",
+    "global_fw_product": "vmseries-flex",
     "global_fw_vmSize": "[parameters('VMSize')]",
     "global_fw_enableAcceleratedNetworking": "[if(equals(parameters('acceleratedNetworking'), 'enable (Only supported on PAN-OS 9.0 or greater)'), 'true', 'false')]",
   
