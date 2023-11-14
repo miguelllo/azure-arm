@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vnetOption": {
+      "value": "Use existing VNET"
+    },
+    "vnetResourceGroup": {
+      "value": "datacenters-networktest-rsg-eus1-dev"
+    },
+    "vnetName": {
+      "value": "vnet-test"
+    },
+    "vnetPrefix": {
+      "value": "10.255.0.0/18"
+    },
+    "subnetName-Management": {
+      "value": "pa-preview-panorama"
+    },
+    "subnetPrefix-Management": {
+      "value": "10.255.8.0/24"
+    },
+    "fW1-Name": {
+      "value": "FW-Palo-Alto-test-bootstrap"
+    },
+    "fW1-IPManagement": {
+      "value": "10.255.8.5"
+    },
+    "licenseType": {
+      "value": "byol"
+    },
+    "panosVersion": {
+      "value": "latest"
+    },
+    "vmSize": {
+      "value": "Standard_DS3_v2"
+    },
+    "osDiskType": {
+      "value": "Standard_LRS"
+    },
+    "acceleratedNetworking": {
+      "value": "enable"
+    },
+    "applyPublicIPToManagement": {
+      "value": "Yes"
+    },
+    "username": {
+      "value": "testlab"
+    },
+    "password": {
+      "value": "TestLabo2023"
+    },
+    "optional-BootstrapStorageAccount": {
+      "value": "datacentersnetworkt835d"
+    },
+    "optional-BootstrapAccessKey": {
+      "value": "HzJza5cQcju6RW4uw7D8KmSwZGADepyLobcgyAfcFXDldWdWjwz+1ieAF9smtEMd8rtp1GZBQXVW+ASt6oDKug=="
+    },
+    "optional-BootstrapFileShareName": {
+      "value": "test-bootstrap-paloalto"
+    },
+    "optional-BootstrapShareDirectory": {
+      "value": null
+    },
+    "optional-AppendStringToResources": {
+      "value": null
+    }
+  }
+}
