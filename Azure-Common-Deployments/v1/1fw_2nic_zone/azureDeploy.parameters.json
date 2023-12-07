@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "VNETOption": {
+      "value": "Create new VNET"
+    },
+    "VNETResourceGroup": {
+      "value": null
+    },
+    "VNETName": {
+      "value": "vmseries-vnet"
+    },
+    "VNETPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetName-Management": {
+      "value": "mgmt-subnet"
+    },
+    "subnetName-Dataplane1": {
+      "value": "untrust-subnet"
+    },
+    "subnetPrefix-Management": {
+      "value": "10.0.0.0/24"
+    },
+    "subnetPrefix-Dataplane1": {
+      "value": "10.0.1.0/24"
+    },
+    "FW1-Name": {
+      "value": "vmseries-fw-vm1"
+    },
+    "FW1-Zone": {
+      "value": "1"
+    },
+    "FW1-IPManagement": {
+      "value": "10.0.0.4"
+    },
+    "FW1-IPDataplane1": {
+      "value": "10.0.1.4"
+    },
+    "licenseType": {
+      "value": "byol"
+    },
+    "PANOSVersion": {
+      "value": "latest"
+    },
+    "VMSize": {
+      "value": "Standard_DS3_v2"
+    },
+    "OSDiskType": {
+      "value": "Standard_LRS"
+    },
+    "acceleratedNetworking": {
+      "value": "enable"
+    },
+    "applyPublicIPToManagement": {
+      "value": "No"
+    },
+    "username": {
+      "value": "paloalto"
+    },
+    "password": {
+      "value": null
+    },
+    "optional-BootstrapStorageAccount": {
+      "value": null
+    },
+    "optional-BootstrapAccessKey": {
+      "value": null
+    },
+    "optional-BootstrapFileShareName": {
+      "value": null
+    },
+    "optional-BootstrapShareDirectory": {
+      "value": null
+    },
+    "optional-AppendStringToResources": {
+      "value": null
+    }
+  }
+}
